@@ -1,28 +1,24 @@
-let instance = null;
-
 class Car {
     constructor(doors, engine, color) {
-        if (!instance) {
-            this.doors = doors;
-            this.engine = engine;
-            this.color = color;
-            instance = this;
-        } else {
-            return instance;
-        }
+        this.doors = doors;
+        this.engine = engine;
+        this.color = color;
 
     }
 }
 
-// class Suv extends Car {
-//     constructor(doors, engine, color, wheels) {
-//         super(doors, engine, color);
-//         this.wheels = wheels;
-//     }
-// }
+class carFactory {
+    createCar(type) {
+        switch (type) {
+            case 'civic':
+                return new Car(4, 'V6', 'grey');
+            case 'honda':
+                return new Car(2, 'V4', 'red');
+        }
+    }
+}
 
-const civic = new Car(4, 'V8', 'red');
-const honda = new Car(2, 'V4', 'pink')
+const factory = new carFactory();
+const honda = factory.createCar('honda');
 
-console.log(civic);
 console.log(honda);
