@@ -7,6 +7,11 @@ https://www.linkedin.com/learning/javascript-patterns
 ## Notes
 
 ### Categories of patterns
-* Creational -> Creane new things
-* Structural -> Structure your code
-* Behavioral -> Use for behaviors in code
+1. Creational -> Creane new things
+* Prototype/Class pattern
+* Constructor pattern
+* Singleton pattern
+* Factory pattern
+* Abstract Factory pattern
+2. Structural -> Structure your code
+3. Behavioral -> Use for behaviors in code
